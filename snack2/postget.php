@@ -11,12 +11,12 @@
     $myName = $_GET['name'];
     $myNameLen = strlen($myName);
     $myEmail = $_GET['email'];
-    $myEmailpos = strpos($myEmail, '@');
+    $myEmailpos = strpos($myEmail, '@') && strpos($myEmail, '.');
     $myAge = $_GET['age'];
     $myAgeCheck = 3;
 
     
-    if($myNameLen > 3 && $myEmailpos == true && $myAge != NAN){
+    if($myNameLen > 3 && $myEmailpos == true && $myAge != NAN ){
 
         echo ($myNameLen > 3) ? '<p>'.'your name ' ."'".$myName."'". ' is a correct name.'.'</p>' : 'invalid name';
         echo ($myEmailpos == true ) ? '<p>'.'your email ' ."'".$myEmail."'". ' is a correct email.'.'</p>' : 'invalid email';
