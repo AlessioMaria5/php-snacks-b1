@@ -11,11 +11,12 @@
 <?php 
 
     $myRandNumbers = [];
-
-    for($i = 0 ; $i < 15 ; $i++){
+        $i = 0;
+    while($i < 15){
         $myrandn = rand(0,50);
         (!in_array($myRandNumbers)) ? $myRandNumbers[] += $myrandn : '' ;
         echo '<p>'. $myRandNumbers[$i] . '</p>'; 
+        $i++;
     }
 
     echo '<p>'. $myRandNumbers[$i] . '</p>'
