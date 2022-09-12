@@ -38,7 +38,7 @@
             'Voti' => [ 
                         10,
                         5,
-                        5,
+                        10,
                         9,
                     ]
         ],
@@ -53,16 +53,18 @@
       // ORA STAMPIAMO I DATI
        for($i = 0 ; $i < count($myStudents)  ; $i++){
         
-        $myVoto = '';
+        $myVoto = 0;
 
-        for($x = 0 ; $x < 3 ; $x++ ){
+        for($x = 0 ; $x < count($myStudents[count('Voti')]) ; $x++ ){
 
             $myVoto += $myStudents[$i]['Voti'][$x];
         };
 
+        $mediaVoto = $myVoto / count($myStudents[count('Voti')]);
+
         echo '<li>'.$myStudents[$i]['Name']. ' ' .
                     $myStudents[$i]['Cognome']. ' || Media Voto: '.
-                    ($myVoto / 4). '</li>';
+                    number_format($mediaVoto,1). '</li>';
     
       }
 
