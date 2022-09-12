@@ -14,10 +14,10 @@
             'Name' => 'Giorgio',
             'Cognome' => 'Rossi',
             'Voti' => [ 
-                        'Geografia' => 6,
-                        'Storia' => 7,
-                        'Italiano' => 5,
-                        'Matematica' => 2,
+                        10,
+                        10,
+                        10,
+                        10,
                     ]
         ],
 
@@ -25,10 +25,10 @@
             'Name' => 'Valentina',
             'Cognome' => 'Bianchi',
             'Voti' => [ 
-                        'Geografia' => 5,
-                        'Storia' => 10,
-                        'Italiano' => 7,
-                        'Matematica' => 2,
+                        10,
+                        3,
+                        9,
+                        7,
                     ]
         ],
 
@@ -36,10 +36,10 @@
             'Name' => 'Giuseppe',
             'Cognome' => 'Verdi',
             'Voti' => [ 
-                        'Geografia' => 10,
-                        'Storia' => 2,
-                        'Italiano' => 8,
-                        'Matematica' => 9,
+                        10,
+                        5,
+                        5,
+                        9,
                     ]
         ],
     ]
@@ -53,20 +53,21 @@
       // ORA STAMPIAMO I DATI
        for($i = 0 ; $i < count($myStudents)  ; $i++){
         
-        for($x ; $x < count($myStudents[$i]['Voti']) ; $x++ ){
+        $myVoto = '';
+
+        for($x = 0 ; $x < 3 ; $x++ ){
 
             $myVoto += $myStudents[$i]['Voti'][$x];
-            
-            
-
         };
 
         echo '<li>'.$myStudents[$i]['Name'].
-                    $myStudents[$i]['Cognome'].
-                    $myVoto. '</li>';
-        
-
+                    $myStudents[$i]['Cognome']. ' Media Voto: '.
+                    ($myVoto / 4). '</li>';
+    
       }
+
+      
+      
     ?>
       
 </ul>
