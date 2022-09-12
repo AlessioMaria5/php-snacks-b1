@@ -60,8 +60,8 @@
             $myVoto += $myStudents[$i]['Voti'][$x];
         };
 
-        echo '<li>'.$myStudents[$i]['Name'].
-                    $myStudents[$i]['Cognome']. ' Media Voto: '.
+        echo '<li>'.$myStudents[$i]['Name']. ' ' .
+                    $myStudents[$i]['Cognome']. ' || Media Voto: '.
                     ($myVoto / 4). '</li>';
     
       }
