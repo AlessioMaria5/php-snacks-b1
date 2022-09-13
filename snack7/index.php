@@ -51,22 +51,22 @@
 <ul>
     <?php 
       // ORA STAMPIAMO I DATI
-       for($i = 0 ; $i < count($myStudents)  ; $i++){
+        for($i = 0 ; $i < count($myStudents)  ; $i++){
         
-        $myVoto = 0;
+            $myVoto = 0;
 
-        for($x = 0 ; $x < count($myStudents[count('Voti')]) ; $x++ ){
+            for($x = 0 ; $x < count($myStudents[count('Voti')]) ; $x++ ){
 
-            $myVoto += $myStudents[$i]['Voti'][$x];
-        };
+                $myVoto += $myStudents[$i]['Voti'][$x];
+            };
 
-        $mediaVoto = $myVoto / count($myStudents[count('Voti')]);
+            $mediaVoto = $myVoto / count($myStudents[count('Voti')]);
 
-        echo '<li>'.$myStudents[$i]['Name']. ' ' .
+            echo '<li>'.$myStudents[$i]['Name']. ' ' .
                     $myStudents[$i]['Cognome']. ' || Media Voto: '.
                     number_format($mediaVoto,1). '</li>';
     
-      }
+        }
 
       
       

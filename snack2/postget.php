@@ -7,14 +7,15 @@
     <title>Snack2</title>
 </head>
 <body>
+    
     <?php 
     $myName = $_GET['name'];
     $myNameLen = strlen($myName);
+
     $myEmail = $_GET['email'];
     $myEmailpos = strpos($myEmail, '@') && strpos($myEmail, '.');
-    $myAge = $_GET['age'];
-    $myAgeCheck = 3;
 
+    $myAge = $_GET['age'];
     
     if($myNameLen > 3 && $myEmailpos == true && $myAge != NAN ){
 
@@ -23,7 +24,6 @@
         echo ($myAge != NAN) ? '<p>'.'your age ' ."'".$myAge."'". ' is a correct age.'.'</p>' : 'Invalid Age' ;
 
     } else echo 'Accesso Negato'
-    
     ?>
     
 </body>

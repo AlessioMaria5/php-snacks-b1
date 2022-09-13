@@ -11,7 +11,8 @@
 <?php 
 
     $myRandNumbers = [];
-        $i = 0;
+
+    $i = 0;
     while($i < 15){
         $myrandn = rand(0,50);
         (!in_array($myRandNumbers)) ? $myRandNumbers[] += $myrandn : '' ;
